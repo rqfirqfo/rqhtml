@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="images/cat1.png">
+<title>rqHTML - Homepage</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.helvetica {
+  font-family: helvetica;
+}
+.arial {
+  font-family: arial;
+}
+.box {
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Arial;
+}
+.boxforheader {
+  background-color: teal;
+  color: white;
+  padding: 9px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Arial;
+}
+
+.link a:link, a:visited {
+  background-color: #3cb371;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Arial;
+  transition: 0.2s;
+ }
+
+.hover a:hover, a:active {
+  background-color: green;
+ }
+h1 {
+  font-family: Helvetica;
+  color: white;
+ }
+h2 {
+  color: white;
+  font-family: arial;
+}
+.round {
+  border-radius: 50%;
+}
+</style>
+<body>
+<body style="background-color:lightgreen;">
+<body onload="startTime()">
+<center><h1 class="boxforheader">Welcome to rqHTML!<h1></center>
+<center><div id="txt" class="box"></div></center>
+<p></p>
+<div class="link hover">
+    <center><a href="D:\My HTML Website\lists.htm">Go to The List of Links</a></center>
+	<p></p>
+	<center><a href="D:\My HTML Website\history.htm">Go to The History of rqHTML </a></center>
+	<p></p>
+</div>
+<MARQUEE>
+  <p class="helvetica">rqHTML, Made by rqfirqfo.</p>
+</MARQUEE>
+<p></p>
+<center><p>Made originally in 10/02/21 (10 February 2021). Huge thanks on w3school.com<br>for making this website further!</p></center>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+document.getElementById("date").innerHTML = Date();
+</script>
+</body>
+</html>
